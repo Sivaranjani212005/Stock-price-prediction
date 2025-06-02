@@ -1,11 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import {
-  LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer
-} from 'recharts';
-
+  LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer} from 'recharts';
 const StockChart = ({ timeInterval }) => {
   const [data, setData] = useState([]);
-
   useEffect(() => {
     const generateData = () => {
       const simulatedData = Array.from({ length: 20 }, (_, i) => ({
@@ -15,10 +12,8 @@ const StockChart = ({ timeInterval }) => {
       }));
       setData(simulatedData);
     };
-
     generateData();
   }, [timeInterval]);
-
   return (
     <ResponsiveContainer width="100%" height={300}>
       <LineChart data={data} margin={{ top: 10, right: 30, left: 20, bottom: 5 }}>
@@ -33,5 +28,4 @@ const StockChart = ({ timeInterval }) => {
     </ResponsiveContainer>
   );
 };
-
 export default StockChart;
