@@ -27,5 +27,4 @@ useEffect(() => {
     </ResponsiveContainer>
   );
 };
-
 export default StockChart;
