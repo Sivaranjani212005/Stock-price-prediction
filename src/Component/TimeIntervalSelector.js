@@ -1,5 +1,4 @@
 import React from 'react';
-
 const TimeIntervalSelector = ({ value, onChange }) => {
   return (
     <div className="time-selector">
@@ -15,5 +14,4 @@ const TimeIntervalSelector = ({ value, onChange }) => {
     </div>
   );
 };
-
 export default TimeIntervalSelector;
